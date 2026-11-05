@@ -10,15 +10,16 @@
 
 ## 이 fork에서 내 역할
 
-AI/ML을 맡았습니다.
+AI/ML을 맡아 핵심 AI 기능의 PoC·구현·트러블슈팅을 대부분 맡았습니다.
 
-- LLM 15종 비교 평가 기록을 정리했습니다.
-- Guardrail 오탐 원인을 찾고 근거 범위 수정을 결정해, 동일 275건 기준 통과 건수를 166건에서 247건으로 늘렸습니다.
-- 추천 이벤트의 session_id 전달 누락을 확인했습니다.
+- 응답 검증 오탐 원인을 찾아 근거 범위 수정을 이끌었고, 같은 275건에서 통과가 166건에서 247건으로 늘었습니다.
+- LLM 후보 15종을 누적 1,750건 평가 기록으로 비교했습니다.
+- AI 기능 12종의 서버리스 전환을 판정하고, Lambda·SQS·SNS·S3·EventBridge Scheduler를 Terraform으로 작성했습니다.
+- 추천 이벤트의 session_id 누락을 Frontend → API → Event Storage → Training Dataset 순서로 추적해 전달 경로를 고쳤습니다.
 
 ## 팀 범위
 
-인프라(Docker → kubeadm 5노드 → AWS EKS → Lightsail, ArgoCD, Prometheus/Grafana)는 팀원이 구축했습니다.
+인프라(Docker → kubeadm 5노드 → AWS EKS → Lightsail, Argo CD, Prometheus/Grafana)는 도구 선택을 팀 회의에서 함께 정했고, 설치·운영은 인프라 담당 팀원이 맡았습니다.
 이 README에서는 해당 범위를 제 기여로 적지 않았습니다.
 
 ## 참고
